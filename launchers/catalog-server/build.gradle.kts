@@ -20,6 +20,7 @@ plugins {
 
 dependencies {
     implementation(project(":extensions:did-example-resolver"))
+    implementation(project(":extensions:indy-did-extension"))
     implementation(project(":extensions:dcp-impl"))
     runtimeOnly(libs.edc.api.secrets)
 

@@ -21,6 +21,7 @@ plugins {
 dependencies {
     runtimeOnly(project(":extensions:superuser-seed"))
     runtimeOnly(project(":extensions:did-example-resolver"))
+    runtimeOnly(project(":extensions:indy-did-extension"))
 
     implementation(libs.edc.ih.spi) // needed in the extensions here
     implementation(libs.edc.ih.spi.credentials) // needed in the extensions here
