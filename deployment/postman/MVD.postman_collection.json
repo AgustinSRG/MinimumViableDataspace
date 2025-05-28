@@ -1862,7 +1862,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"did\": \"did:web:consumer-identityhub%3A7083:connector1\"\n}",
+									"raw": "{\n    \"did\": \"did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:connector1\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1916,7 +1916,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"did\": \"did:web:consumer-identityhub%3A7083:connector1\"\n}",
+									"raw": "{\n    \"did\": \"did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:connector1\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6206,7 +6206,7 @@
 		},
 		{
 			"key": "ISSUER_DID",
-			"value": "did:web:localhost%3A10100",
+			"value": "did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be",
 			"type": "string"
 		},
 		{

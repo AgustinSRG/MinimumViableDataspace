@@ -18,11 +18,11 @@
 #
 
 variable "consumer-did" {
-  default = "did:web:consumer-identityhub%3A7083:consumer"
+  default = "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:consumer"
 }
 
 variable "provider-did" {
-  default = "did:web:provider-identityhub%3A7083:provider"
+  default = "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca:provider"
 }
 
 variable "useSVE" {

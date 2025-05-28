@@ -61,7 +61,7 @@ public class TransferEndToEndTest {
     // DSP service URL of the provider, not reachable outside the cluster
     private static final String PROVIDER_DSP_URL = "http://provider-qna-controlplane:8082";
     // DID of the provider company
-    private static final String PROVIDER_ID = "did:web:provider-identityhub%3A7083:provider";
+    private static final String PROVIDER_ID = "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca:provider";
     // public API endpoint of the provider-qna connector, goes through the ingress controller
     private static final String PROVIDER_PUBLIC_URL = "http://127.0.0.1/provider-qna/public";
     private static final String PROVIDER_MANAGEMENT_URL = "http://127.0.0.1/provider-qna/cp";

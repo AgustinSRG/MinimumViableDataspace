@@ -64,11 +64,11 @@ DATA_CONSUMER=$(jq -n --arg url "$CONSUMER_CONTROLPLANE_SERVICE_URL" --arg ihurl
              }
            ],
            "active": true,
-           "participantId": "did:web:consumer-identityhub%3A7083:consumer",
-           "did": "did:web:consumer-identityhub%3A7083:consumer",
+           "participantId": "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:consumer",
+           "did": "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:consumer",
            "key":{
-               "keyId": "did:web:consumer-identityhub%3A7083:consumer#key-1",
-               "privateKeyAlias": "did:web:consumer-identityhub%3A7083:consumer#key-1",
+               "keyId": "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:consumer#key-1",
+               "privateKeyAlias": "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:consumer#key-1",
                "keyGeneratorParams":{
                   "algorithm": "EC"
                }
@@ -104,11 +104,11 @@ DATA_PROVIDER=$(jq -n --arg url "$PROVIDER_CONTROLPLANE_SERVICE_URL" --arg ihurl
              }
            ],
            "active": true,
-           "participantId": "did:web:provider-identityhub%3A7083:provider",
-           "did": "did:web:provider-identityhub%3A7083:provider",
+           "participantId": "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca:provider",
+           "did": "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca:provider",
            "key":{
-               "keyId": "did:web:provider-identityhub%3A7083:provider#key-1",
-               "privateKeyAlias": "did:web:provider-identityhub%3A7083:provider#key-1",
+               "keyId": "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca:provider#key-1",
+               "privateKeyAlias": "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca:provider#key-1",
                "keyGeneratorParams":{
                   "algorithm": "EC"
                }
@@ -156,8 +156,8 @@ curl -s --location 'http://127.0.0.1/issuer/cs/api/identity/v1alpha/participants
 newman run \
   --folder "Seed Issuer SQL" \
   --env-var "ISSUER_ADMIN_URL=http://127.0.0.1/issuer/ad" \
-  --env-var "CONSUMER_ID=did:web:consumer-identityhub%3A7083:consumer" \
+  --env-var "CONSUMER_ID=did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:consumer" \
   --env-var "CONSUMER_NAME=MVD Consumer Participant" \
-  --env-var "PROVIDER_ID=did:web:provider-identityhub%3A7083:provider" \
+  --env-var "PROVIDER_ID=did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca:provider" \
   --env-var "PROVIDER_NAME=MVD Provider Participant" \
   ./deployment/postman/MVD.postman_collection.json

@@ -156,10 +156,10 @@ DATA_ISSUER=$(jq -n --arg pem "$PEM_ISSUER" '{
               }
             ],
             "active": true,
-            "participantId": "did:web:localhost%3A10100",
-            "did": "did:web:localhost%3A10100",
+            "participantId": "did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be",
+            "did": "did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be",
             "key":{
-                "keyId": "did:web:localhost%3A10100#key-1",
+                "keyId": "did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be#key-1",
                 "privateKeyAlias": "key-1",
                 "keyGeneratorParams":{
                   "algorithm": "EdDSA"

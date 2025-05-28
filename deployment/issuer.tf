@@ -61,8 +61,8 @@ resource "kubernetes_config_map" "issuer-initdb-config" {
 
         -- seed the consumer and provider into the attestations DB, so that they can request FoobarCredentials sourcing
         -- information from the database
-        INSERT INTO membership_attestations (membership_type, holder_id) VALUES (1, 'did:web:consumer-identityhub%3A7083:consumer');
-        INSERT INTO membership_attestations (membership_type, holder_id) VALUES (2, 'did:web:provider-identityhub%3A7083:provider');
+        INSERT INTO membership_attestations (membership_type, holder_id) VALUES (1, 'did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1:consumer');
+        INSERT INTO membership_attestations (membership_type, holder_id) VALUES (2, 'did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca:provider');
       EOT
   }
 }
