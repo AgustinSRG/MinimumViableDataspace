@@ -58,10 +58,10 @@ DATA_CONSUMER=$(jq -n --arg pem "$PEM_CONSUMER" '{
              }
            ],
            "active": true,
-           "participantId": "did:web:localhost%3A7083",
-           "did": "did:web:localhost%3A7083",
+           "participantId": "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1",
+           "did": "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1",
            "key":{
-               "keyId": "did:web:localhost%3A7083#key-1",
+               "keyId": "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1#key-1",
                "privateKeyAlias": "key-1",
                "publicKeyPem":"\($pem)"
            }
@@ -81,7 +81,7 @@ SECRETS_DATA=$(jq -n --arg secret "$clientSecret" \
     "edc" : "https://w3id.org/edc/v0.0.1/ns/"
   },
   "@type" : "https://w3id.org/edc/v0.0.1/ns/Secret",
-  "@id" : "did:web:localhost%3A7083-sts-client-secret",
+  "@id" : "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1-sts-client-secret",
   "https://w3id.org/edc/v0.0.1/ns/value": "\($secret)"
 }')
 
@@ -107,10 +107,10 @@ DATA_PROVIDER=$(jq -n --arg pem "$PEM_PROVIDER" '{
               }
             ],
             "active": true,
-            "participantId": "did:web:localhost%3A7093",
-            "did": "did:web:localhost%3A7093",
+            "participantId": "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca",
+            "did": "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca",
             "key":{
-                "keyId": "did:web:localhost%3A7093#key-1",
+                "keyId": "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca#key-1",
                 "privateKeyAlias": "key-1",
                 "publicKeyPem":"\($pem)"
             }
@@ -130,7 +130,7 @@ SECRETS_DATA=$(jq -n --arg secret "$clientSecret" \
     "edc" : "https://w3id.org/edc/v0.0.1/ns/"
   },
   "@type" : "https://w3id.org/edc/v0.0.1/ns/Secret",
-  "@id" : "did:web:localhost%3A7093-sts-client-secret",
+  "@id" : "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca-sts-client-secret",
   "https://w3id.org/edc/v0.0.1/ns/value": "\($secret)"
 }')
 
@@ -175,8 +175,8 @@ curl -s --location 'http://localhost:10015/api/identity/v1alpha/participants/' \
 newman run \
   --folder "Seed Issuer" \
   --env-var "ISSUER_ADMIN_URL=http://localhost:10013" \
-  --env-var "CONSUMER_ID=did:web:localhost%3A7083" \
+  --env-var "CONSUMER_ID=did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1" \
   --env-var "CONSUMER_NAME=MVD Consumer Participant" \
-  --env-var "PROVIDER_ID=did:web:localhost%3A7093" \
+  --env-var "PROVIDER_ID=did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca" \
   --env-var "PROVIDER_NAME=MVD Provider Participant" \
   ./deployment/postman/MVD.postman_collection.json

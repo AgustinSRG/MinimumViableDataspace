@@ -271,9 +271,9 @@ DID document as JSON structure:
   "service": [],
   "verificationMethod": [
     {
-      "id": "did:web:localhost%3A9876#key-1",
+      "id": "did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be#key-1",
       "type": "JsonWebKey2020",
-      "controller": "did:web:localhost%3A9876",
+      "controller": "did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be",
       "publicKeyMultibase": null,
       "publicKeyJwk": {
         "kty": "OKP",
@@ -285,18 +285,18 @@ DID document as JSON structure:
   "authentication": [
     "key-1"
   ],
-  "id": "did:web:localhost%3A9876",
+  "id": "did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be",
   "@context": [
     "https://www.w3.org/ns/did/v1",
     {
-      "@base": "did:web:localhost%3A9876"
+      "@base": "did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be"
     }
   ]
 }
 ```
 
 The port mapping is **important**, because it influences the DID of the issuer: with a host port of
-`9876` the issuer DID resolves to `did:web:localhost%3A9876`. Changing the port mapping changes the DID, soif you change
+`9876` the issuer DID resolves to `did:indy:besu:wf:0x9df759c1962a232ae379a499e6fd2a1b5b96e6be`. Changing the port mapping changes the DID, soif you change
 the port mapping, be sure to execute a search-and-replace!
 
 Naturally, you are free to install NGINX natively on your computer or use any other webserver altogether, but this won't

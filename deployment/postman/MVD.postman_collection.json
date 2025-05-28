@@ -5771,7 +5771,7 @@
 										"holders"
 									]
 								},
-								"description": "Generated from cURL: curl -sL -X POST 'http://localhost:10013/api/admin/v1alpha/holders' \\\n-H 'Content-Type: application/json' \\\n-d '{ \"did\": \"did:web:localhost%3A7083\", \"participantId\": \"did:web:localhost%3A7083\", \"name\": \"Consumer Participant\"}'"
+								"description": "Generated from cURL: curl -sL -X POST 'http://localhost:10013/api/admin/v1alpha/holders' \\\n-H 'Content-Type: application/json' \\\n-d '{ \"did\": \"did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1\", \"participantId\": \"did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1\", \"name\": \"Consumer Participant\"}'"
 							},
 							"response": []
 						},
@@ -5803,7 +5803,7 @@
 										"holders"
 									]
 								},
-								"description": "Generated from cURL: curl -sL -X POST 'http://localhost:10013/api/admin/v1alpha/holders' \\\n-H 'Content-Type: application/json' \\\n-d '{ \"did\": \"did:web:localhost%3A7093\", \"participantId\": \"did:web:localhost%3A7093\", \"name\": \"Provider Participant\"}'"
+								"description": "Generated from cURL: curl -sL -X POST 'http://localhost:10013/api/admin/v1alpha/holders' \\\n-H 'Content-Type: application/json' \\\n-d '{ \"did\": \"did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca\", \"participantId\": \"did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca\", \"name\": \"Provider Participant\"}'"
 							},
 							"response": []
 						},
@@ -5928,7 +5928,7 @@
 										"holders"
 									]
 								},
-								"description": "Generated from cURL: curl -sL -X POST 'http://localhost:10013/api/admin/v1alpha/holders' \\\n-H 'Content-Type: application/json' \\\n-d '{ \"did\": \"did:web:localhost%3A7083\", \"participantId\": \"did:web:localhost%3A7083\", \"name\": \"Consumer Participant\"}'"
+								"description": "Generated from cURL: curl -sL -X POST 'http://localhost:10013/api/admin/v1alpha/holders' \\\n-H 'Content-Type: application/json' \\\n-d '{ \"did\": \"did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1\", \"participantId\": \"did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1\", \"name\": \"Consumer Participant\"}'"
 							},
 							"response": []
 						},
@@ -5960,7 +5960,7 @@
 										"holders"
 									]
 								},
-								"description": "Generated from cURL: curl -sL -X POST 'http://localhost:10013/api/admin/v1alpha/holders' \\\n-H 'Content-Type: application/json' \\\n-d '{ \"did\": \"did:web:localhost%3A7093\", \"participantId\": \"did:web:localhost%3A7093\", \"name\": \"Provider Participant\"}'"
+								"description": "Generated from cURL: curl -sL -X POST 'http://localhost:10013/api/admin/v1alpha/holders' \\\n-H 'Content-Type: application/json' \\\n-d '{ \"did\": \"did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca\", \"participantId\": \"did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca\", \"name\": \"Provider Participant\"}'"
 							},
 							"response": []
 						},
@@ -6153,7 +6153,7 @@
 		},
 		{
 			"key": "PROVIDER_ID",
-			"value": "did:web:localhost%3A7093",
+			"value": "did:indy:besu:wf:0x84cf7b8a2ad00549d47292bdd8942ae6a508eeca",
 			"type": "string"
 		},
 		{
@@ -6186,7 +6186,7 @@
 		},
 		{
 			"key": "NEW_PARTICIPANT_ID",
-			"value": "did:web:localhost%3A7083",
+			"value": "did:indy:besu:wf:0x4054227676244d1a579008d3f0ab63c2433368d1",
 			"type": "string"
 		},
 		{
