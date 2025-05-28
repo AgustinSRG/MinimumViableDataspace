@@ -14,7 +14,6 @@
 
 package org.weforming.edc.extension.identity;
 
-import org.eclipse.edc.http.spi.EdcHttpClient;
 import org.eclipse.edc.iam.did.spi.resolution.DidResolverRegistry;
 import org.eclipse.edc.runtime.metamodel.annotation.Extension;
 import org.eclipse.edc.runtime.metamodel.annotation.Inject;
@@ -64,9 +63,6 @@ public class IndyBesuDidExtension implements ServiceExtension {
     WebService webService;
 
     @Inject
-    private EdcHttpClient httpClient;
-
-    @Inject
     private TypeManager typeManager;
 
     @Override
@@ -84,7 +80,7 @@ public class IndyBesuDidExtension implements ServiceExtension {
         var identityProxyUrl = context.getSetting(IDENTITY_PROXY_URL, "http://127.0.0.1:80/");
         var identityProxyToken = context.getSetting(IDENTITY_PROXY_TOKEN, "");
 
-        var resolver = new IndyBesuDidResolver(httpClient, identityProxyUrl, identityProxyToken, mapper, monitor);
+        var resolver = new IndyBesuDidResolver(identityProxyUrl, identityProxyToken, mapper, monitor);
 
         resolverRegistry.register(resolver);
 

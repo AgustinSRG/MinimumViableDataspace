@@ -26,4 +26,6 @@ dependencies {
     implementation(libs.edc.did.core)
 
     implementation(libs.jakarta.rsApi)
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 }

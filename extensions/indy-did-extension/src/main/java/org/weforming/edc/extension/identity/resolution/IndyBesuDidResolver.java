@@ -16,7 +16,7 @@ package org.weforming.edc.extension.identity.resolution;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.Request;
-import org.eclipse.edc.http.spi.EdcHttpClient;
+import okhttp3.OkHttpClient;
 import org.eclipse.edc.iam.did.spi.document.DidDocument;
 import org.eclipse.edc.iam.did.spi.resolution.DidResolver;
 import org.eclipse.edc.spi.monitor.Monitor;
@@ -37,7 +37,7 @@ import static java.lang.String.format;
 public class IndyBesuDidResolver implements DidResolver {
     private static final String DID_METHOD = "indy";
 
-    private final EdcHttpClient httpClient;
+    private final OkHttpClient httpClient;
     private final ObjectMapper mapper;
     private final Monitor monitor;
     private final String identityProxyUrl;
@@ -47,13 +47,12 @@ public class IndyBesuDidResolver implements DidResolver {
     /**
      * Instantiates IndyBesuDidResolver
      *
-     * @param httpClient HTTP client to use
      * @param identityProxyUrl URL of the identity proxy
      * @param mapper Object mapper instance
      * @param monitor Monitor instance
      */
-    public IndyBesuDidResolver(EdcHttpClient httpClient, String identityProxyUrl, String identityProxyApiToken, ObjectMapper mapper, Monitor monitor) {
-        this.httpClient = httpClient;
+    public IndyBesuDidResolver(String identityProxyUrl, String identityProxyApiToken, ObjectMapper mapper, Monitor monitor) {
+        this.httpClient = new OkHttpClient();
         this.identityProxyUrl = identityProxyUrl;
         this.identityProxyApiToken = identityProxyApiToken;
         this.mapper = mapper;
@@ -95,7 +94,7 @@ public class IndyBesuDidResolver implements DidResolver {
         monitor.debug("Calling identity proxy endpoint: GET " + url);
 
         var request = new Request.Builder().url(url).get().header("x-api-token", this.identityProxyApiToken).build();
-        try (var response = httpClient.execute(request)) {
+        try (var response = httpClient.newCall(request).execute()) {
             if (response.code() != 200) {
                 monitor.debug(format("Error resolving DID: %s. HTTP Code was: %s", didKey, response.code()));
                 return Result.failure(format("Error resolving DID: %s. HTTP Code was: %s", didKey, response.code()));
